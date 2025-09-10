@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Typewriter } from "react-simple-typewriter";
 
+
+
+
 export default function Banner() {
   return (
     <div className="relative bg-secondary text-primary ">
@@ -40,6 +43,7 @@ export default function Banner() {
             />
           </p>
 
+         
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
             <Link href={"/courses"}>
@@ -74,5 +78,6 @@ export default function Banner() {
         </div>
       </div>
     </div>
+    
   );
 }

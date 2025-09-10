@@ -7,7 +7,6 @@ import {
   Roboto,
 } from "next/font/google";
 import { ToastContainer } from "react-toastify";
-import Chatbot from "./components/ChatBot";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import "./globals.css";
@@ -32,17 +31,19 @@ const italiannoo = Italianno({
   variable: "--font-italianno",
 });
 const quicksand = Quicksand({
-  weight: "400",
+  weight: "500",
   subsets: ["latin"],
 });
+export const metadata = {
+  title: "Eduverse",
+  icons: {
+    icon: "/icon.png", // ✅ path relative to public
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="light">
-      <head>
-        <link rel="icon" href="/icon.ico" sizes="16x16 32x32 48x48" />
-        <title>Eduverse</title>
-      </head>
       <body
         className={`${quicksand.className} ${geistMono.variable} antialiased`}
       >
@@ -59,7 +60,6 @@ export default function RootLayout({ children }) {
             pauseOnHover
           />
         </NextAuthProviders>
-        <Chatbot></Chatbot>
       </body>
     </html>
   );
